@@ -28,7 +28,7 @@
             <i data-feather="menu">Menu</i>
         </button>
         <a href="https://unscripted.marquiskurt.net/" class="ms-navbar-logo">
-            <img src="../../../../../assets/img/logomark.svg" alt="Unscripted"></a>
+            <img src="../../../../../assets/img/logo.svg" alt="Unscripted"></a>
         <ul class="ms-navbar-links">
 <li><a href="https://discord.gg/CXxnVhX">Discord</a></li>
                 <li><a href="https://1n.pm/AsuXE">Report a Bug</a></li>
@@ -37,6 +37,16 @@
         </ul>
 </div>
 </nav><main class="ms-body"><style>
+.post {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.post-content {
+    grid-column-start: 1;
+    grid-column-end: 10;
+}
+
 .twitter-tweet {
     background: #e3f2fd;
     color: #333333;
@@ -59,6 +69,10 @@ img {
     img {
         width: 100%;
     }
+
+    .post {
+        display: block;
+    }
 }
 </style>
 <div class="ms-strip darker thicker">
@@ -69,8 +83,9 @@ img {
             <a href="../../../../../categories/demo/"> demo</a>
     </p>
 </div>
-<div class="ms-strip">
-    <div>
+<div class="ms-strip post">
+    <div class="post-content">
+        <div>
 <p>Howdy!</p>
 <p>Thanks to all of those who got their hands on the demo! I've just released a quick patch update that fixes a couple of issues:</p>
 <ul>
@@ -79,8 +94,9 @@ img {
 </ul>
 <p>If you find any more issues, please do let me know on YouTrack! Thanks again.</p>
 </div>
+    </div>
 </div>
-        </main><footer class="ms-footer"><p><small>© 2019-2020         <a href="mailto:unscriptedvn@marquiskurt.net">Marquis Kurt</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </small></p>
+        </main><footer class="ms-footer"><p><small>© 2019-2020         <a href="mailto:unscriptedvn@marquiskurt.net">Marquis Kurt</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>          | <a href="https://github.com/UnscriptedVN/mastina">View theme on GitHub</a></small></p>
     <div>
         <ul class="ms-footer-links">
 <li><a href="../../../../../pages/privacy_policy/">Privacy Policy</a></li>

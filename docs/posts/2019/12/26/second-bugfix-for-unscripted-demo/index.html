@@ -28,7 +28,7 @@
             <i data-feather="menu">Menu</i>
         </button>
         <a href="https://unscripted.marquiskurt.net/" class="ms-navbar-logo">
-            <img src="../../../../../assets/img/logomark.svg" alt="Unscripted"></a>
+            <img src="../../../../../assets/img/logo.svg" alt="Unscripted"></a>
         <ul class="ms-navbar-links">
 <li><a href="https://discord.gg/CXxnVhX">Discord</a></li>
                 <li><a href="https://1n.pm/AsuXE">Report a Bug</a></li>
@@ -37,6 +37,16 @@
         </ul>
 </div>
 </nav><main class="ms-body"><style>
+.post {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.post-content {
+    grid-column-start: 1;
+    grid-column-end: 10;
+}
+
 .twitter-tweet {
     background: #e3f2fd;
     color: #333333;
@@ -59,6 +69,10 @@ img {
     img {
         width: 100%;
     }
+
+    .post {
+        display: block;
+    }
 }
 </style>
 <div class="ms-strip darker thicker">
@@ -69,8 +83,9 @@ img {
             <a href="../../../../../categories/demo/"> demo</a>
     </p>
 </div>
-<div class="ms-strip">
-    <div>
+<div class="ms-strip post">
+    <div class="post-content">
+        <div>
 <p>Howdy!</p>
 <p>I've released another bug fix release of the demo to Unscripted today. This mostly is a continuation of fixing issues with inventory item duplications (<a href="https://youtrack.marquiskurt.net/youtrack/issue/UVN-33">UVN-33</a>). The following should now be fixed:</p>
 <ul>
@@ -81,8 +96,9 @@ img {
 <p>I hope this fixes all of the issues with the way inventories are implemented, but I'm on the lookout for anything else that crops up. As always, if you do find something fishy with the demo release, report it on YouTrack! You can do so from the main menu with the "Report a Bug" option or head to the website yourself: <a href="https://1n.pm/AsuXE">https://1n.pm/AsuXE</a>.</p>
 <p>Thanks, and I hope you all keep enjoying Unscripted!</p>
 </div>
+    </div>
 </div>
-        </main><footer class="ms-footer"><p><small>© 2019-2020         <a href="mailto:unscriptedvn@marquiskurt.net">Marquis Kurt</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </small></p>
+        </main><footer class="ms-footer"><p><small>© 2019-2020         <a href="mailto:unscriptedvn@marquiskurt.net">Marquis Kurt</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>          | <a href="https://github.com/UnscriptedVN/mastina">View theme on GitHub</a></small></p>
     <div>
         <ul class="ms-footer-links">
 <li><a href="../../../../../pages/privacy_policy/">Privacy Policy</a></li>

@@ -28,7 +28,7 @@
             <i data-feather="menu">Menu</i>
         </button>
         <a href="https://unscripted.marquiskurt.net/" class="ms-navbar-logo">
-            <img src="../../../../../assets/img/logomark.svg" alt="Unscripted"></a>
+            <img src="../../../../../assets/img/logo.svg" alt="Unscripted"></a>
         <ul class="ms-navbar-links">
 <li><a href="https://discord.gg/CXxnVhX">Discord</a></li>
                 <li><a href="https://1n.pm/AsuXE">Report a Bug</a></li>
@@ -37,6 +37,16 @@
         </ul>
 </div>
 </nav><main class="ms-body"><style>
+.post {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.post-content {
+    grid-column-start: 1;
+    grid-column-end: 10;
+}
+
 .twitter-tweet {
     background: #e3f2fd;
     color: #333333;
@@ -59,6 +69,10 @@ img {
     img {
         width: 100%;
     }
+
+    .post {
+        display: block;
+    }
 }
 </style>
 <div class="ms-strip darker thicker">
@@ -70,16 +84,18 @@ img {
             <a href="../../../../../categories/update/"> update</a>
     </p>
 </div>
-<div class="ms-strip">
-    <div>
+<div class="ms-strip post">
+    <div class="post-content">
+        <div>
 <p>Howdy, folks!</p>
 <p>I'm releasing a quick (but important) hotfix of the feature update for the Unscripted Demo feature update (v1.1.0-demo1). There's not much to this update, but it should resolve the missing start label issue found on Windows (see <a href="https://youtrack.marquiskurt.net/youtrack/issue/UVN-43">UVN-43</a>). Additionally, it brings a new version of the demo license that better explains the terms and conditions.</p>
 <p>Feature and improvement-wise, there aren't a lot of changes to the game in this update that affect the gameplay. However, this is the first version of Unscripted Demo that uses the new build system that the current developer project uses, so the Ren'Py archives are slightly different and some things might function a little bit differently.</p>
 <p>Thanks for your continued patience, and I can't wait to get the full game out later this year!</p>
 <p>- Marquis</p>
 </div>
+    </div>
 </div>
-        </main><footer class="ms-footer"><p><small>© 2019-2020         <a href="mailto:unscriptedvn@marquiskurt.net">Marquis Kurt</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </small></p>
+        </main><footer class="ms-footer"><p><small>© 2019-2020         <a href="mailto:unscriptedvn@marquiskurt.net">Marquis Kurt</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>          | <a href="https://github.com/UnscriptedVN/mastina">View theme on GitHub</a></small></p>
     <div>
         <ul class="ms-footer-links">
 <li><a href="../../../../../pages/privacy_policy/">Privacy Policy</a></li>
