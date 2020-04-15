@@ -1,0 +1,3 @@
+[submodule "src/themes/mastina"]
+	path = src/themes/mastina
+	url = https://github.com/UnscriptedVN/mastina

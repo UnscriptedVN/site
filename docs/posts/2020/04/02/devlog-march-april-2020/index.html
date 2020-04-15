@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Captain's Devlog: March-April 2020 - Unscripted Devlog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../../../../assets/css/modernscale.css">
+<link rel="stylesheet" href="../../../../../assets/css/mastina.css">
+<link rel="stylesheet" href="../../../../../assets/css/dracula.css">
+<link rel="stylesheet" href="../../../../../assets/css/mastina-dark.css" media="(prefers-color-scheme: dark)">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="apple-touch-icon" sizes="180x180" href="../../../../../assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../../../assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../../../assets/icons/favicon-16x16.png">
+<link rel="manifest" href="../../../../../assets/icons/site.webmanifest">
+<link rel="mask-icon" href="../../../../../assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#ff0097">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Captain's Devlog: March-April 2020 - Unscripted Devlog">
+<meta property="article:author" content="© 2020 Marquis Kurt.">
+<meta property="og:description" content="It's been a while since any activity regarding Unscripted has been published. This post will cover what's been going on behind the scenes.">
+<meta property="og:url" content="https://unscripted.marquiskurt.net/">
+<meta property="og:image" content="/assets/favicons/android-chrome-192x192.png">
+<meta property="”og:type”" content="”website”">
+</head>
+<body>
+<nav class="ms-navbar-container "><div class="ms-navbar">
+        <button class="ms-navbar-menu-button" onclick="toggleZip()">
+            <i data-feather="menu">Menu</i>
+        </button>
+        <a href="https://unscripted.marquiskurt.net/" class="ms-navbar-logo">
+            <img src="../../../../../assets/img/logomark.svg" alt="Unscripted"></a>
+        <ul class="ms-navbar-links">
+<li><a href="https://discord.gg/CXxnVhX">Discord</a></li>
+                <li><a href="https://1n.pm/AsuXE">Report a Bug</a></li>
+                <li><a href="https://marquiskurt.itch.io/unscripted">Download</a></li>
+                <li><a href="https://github.com/UnscriptedVN">GitHub</a></li>
+        </ul>
+</div>
+</nav><main class="ms-body"><style>
+.twitter-tweet {
+    background: #e3f2fd;
+    color: #333333;
+    border-left-color: #42a5f5;
+    border-left-style: solid;
+    border-left-width: 4px;
+    padding: 1em .75em;
+    font-size: 1.1em;
+}
+
+p {
+    font-size: 1.05em;
+}
+img {
+    width: 75%;
+    margin: auto;
+}
+
+@media(max-width:768px) {
+    img {
+        width: 100%;
+    }
+}
+</style>
+<div class="ms-strip darker thicker">
+    <h1 class="ms-strip-margins">Captain's Devlog: March-April 2020</h1>
+    <p>Written on April 02, 2020</p>
+    <p>Tags:
+            <a href="../../../../../categories/devlog/"> devlog</a>
+    </p>
+</div>
+<div class="ms-strip">
+    <div>
+<p>Hey everyone,</p>
+<p>It's been a while since my last update to the demo was released (about a month or two, I believe), and I haven't released much since then. However, there are a couple of things I'd like to tell you all about what's been going on with Unscripted the past few months.</p>
+<h3>A new character steps forward</h3>
+<p>After publishing the demo, I went to work into writing more of the full story with multiple routes. Unfortunately, I was kind of a bit struck with writer's block and needed to find a solution before starting to lose interest. Luckily, I figured out a solution that I think this visual novel deserves: a new, fourth character.</p>
+<p><img src="../../../../../assets/img/posts/fira1.png" alt="Meredith 1"></p>
+<p>As of a week ago, I teamed up with Raseruuu, the game's sprite artist, to bring her to life into the game. This new character, "Meredith" (legal name), is the first non-programmer in the game and has a unique personality that I think you'll all love learning more about as much I have been writing for her!</p>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">It's Rush Drawing time!!<br><br>new sprite for Unscripted VN<br>I need that commission money uguu, salary hasn't come uwaaa<a href="https://t.co/eMFqIvvuxC">https://t.co/eMFqIvvuxC</a> <a href="https://t.co/b465RRWMtZ">pic.twitter.com/b465RRWMtZ</a></p>— Zan Kizuna @SoftWar (@Raseruuuuu) <a href="https://twitter.com/Raseruuuuu/status/1242428269963567111?ref_src=twsrc%5Etfw">March 24, 2020</a>
+</blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><h3>Expanding the minigame</h3>
+<p>I knew that I wanted to add more to the minigame that Unscripted offers. For those that may not be familiar, Unscripted includes a minigame in which you control Mastina, a mastodon, through a world, collecting coins in the process. The minigame currently uses a set of buttons that a player clicks in a specific order to solve the puzzle, but I know that I personally would prefer to have the flexibility of writing a script rather than entering one in manually with a user interface.</p>
+<p><img src="../../../../../assets/img/posts/api.png" alt="API"></p>
+<p>Enter the Unscripted Minigame API. The Minigame API is part of a bigger chunk of the minigame's advanced mode where players can write Python scripts to solve the puzzle instead of using the buttons. This should give experienced (and new) players/developers the flexibility that Python offers while allowing players to write sensible code and interact with the minigame that wouldn't be possible otherwise. I've also been working on writing some solid documentation that explains the API in great detail and everything you need to know to write great scripts to solve puzzles.</p>
+<h3>So... extended demo?</h3>
+<p>There's been a really <a href="https://t.co/ZRpoA1PLKF?amp=1">fun playthrough of Unscripted's demo that I've watched</a>, and the YouTuber, Cryptic Hybrid, brought up the question of possibly releasing an extended demo. After some thinking and working on the new character and advanced mode of the minigame, I will probably release an extended demo. The demo will come as a traditional feature update to the game, and it will probably include the following:</p>
+<ul>
+<li>More chapters available to where all characters have been introduced. This will let players meet each character, especially the new addition to the team.</li>
+<li>Some minigame puzzles, with the advanced mode ready.</li>
+<li>New iconography for the app on Windows and macOS that best represent the platforms they're running on.</li>
+<li>A new start screen for a new game that lets you choose your programming language and pronoun preferences in addition to your name.</li>
+<li>(Possibly) Some scenes with CGs. Because they're always fun!</li>
+</ul>
+<p>I hope to keep up with the dev-logging and let you know more about Unscripted as I keep developing it. Cheers!</p>
+<p>- Marquis</p>
+</div>
+</div>
+        </main><footer class="ms-footer"><p><small>© 2019-2020         <a href="mailto:unscriptedvn@marquiskurt.net">Marquis Kurt</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </small></p>
+    <div>
+        <ul class="ms-footer-links">
+<li><a href="../../../../../pages/privacy_policy/">Privacy Policy</a></li>
+                <li><a href="../../../../../pages/contributions/">Contributions</a></li>
+                <li><a href="https://twitter.com/UnscriptedVN">Twitter</a></li>
+                <li><a href="https://youtrack.marquiskurt.net/youtrack/issues/UVN">YouTrack</a></li>
+                <li><a href="../../../../../archive.html">Devlog Archive</a></li>
+                <li><a href="../../../../../categories/">Tags</a></li>
+                <li><a href="../../../../../rss.xml">RSS</a></li>
+        </ul>
+</div>
+</footer><script src="../../../../../assets/js/mastina-utils.js"></script><script src="../../../../../assets/js/feather.min.js"></script><script src="../../../../../assets/js/highlight.pack.js"></script><script>
+        feather.replace();
+        hljs.initHighlightingOnLoad();
+    </script>
+</body>
+</html>

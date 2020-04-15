@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Unscripted (Posts about tools)</title><link>https://unscripted.marquiskurt.net/</link><description></description><atom:link href="https://unscripted.marquiskurt.net/categories/tools.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:unscriptedvn@marquiskurt.net"&gt;Marquis Kurt&lt;/a&gt; </copyright><lastBuildDate>Wed, 15 Apr 2020 01:56:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Releasing the distribution tools</title><link>https://unscripted.marquiskurt.net/posts/2020/01/04/releasing-the-distribution-tools/</link><dc:creator>Marquis Kurt</dc:creator><description>&lt;div&gt;&lt;p&gt;Howdy!&lt;/p&gt;
+&lt;p&gt;Today, I'm releasing the tools that I have written to make Ren'Py distribution for the Mac a bit easier. This package, &lt;code&gt;renpy-distribute-tools&lt;/code&gt;, is an open-source module for Python 3 and is Poetry-compatible.&lt;/p&gt;
+&lt;h3&gt;Why not &lt;code&gt;renpy/mac-notarization&lt;/code&gt;?&lt;/h3&gt;
+&lt;p&gt;I started developing the tools before the scripts published on the Ren'Py GitHub were uploaded. Initially, the tools were bundled in the same place where I develop Unscripted, but I've moved them elsewhere when modernizing the Unscripted project. These tools also are just a bunch of Python functions and classes, so you can integrate them more easily into your workflow.&lt;/p&gt;
+&lt;h3&gt;How to get it&lt;/h3&gt;
+&lt;p&gt;You can get the tools at &lt;a href="https://github.com/alicerunsonfedora/renpy-distribute-tools"&gt;https://github.com/alicerunsonfedora/renpy-distribute-tools&lt;/a&gt; via GitHub. You can either download the latest release, clone the source code manually, or add them as a dependency to your Poetry project if you're using &lt;a href="https://python-poetry.org"&gt;Poetry&lt;/a&gt; to manage your VN:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-toml"&gt;[tool.poetry.dev-dependencies]
+renpy-distribute-tools = { git = "https://github.com/alicerunsonfedora/renpy-distribute-tools.git", rev = "v0.2.2" }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;How to use it&lt;/h3&gt;
+&lt;p&gt;The tools don't come with any pre-built scripts like the Mac notarization tools provided by Ren'Py, but you can call the methods in the module to simplify the process.&lt;/p&gt;
+&lt;p&gt;For instance, if you want to fix the property list for the Mac build, code sign, and notarize it:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-python"&gt;from renpy_distribute_tools import fix_plist, code_sign, upload_to_notary
+
+author = "Joe Smith"
+bundle_identifier = "com.example.my-vn"
+code_sign_identity = "Developer ID Application: Joe Smith (XXXXXXXXXX)"
+app_path = "VN-1.0.0-dists/VN-1.0.0-mac/VN.app"
+apple_email = "example.joesmith@icloud.com"
+apple_provider = "XXXXXXXXXX"
+
+fix_plist(app_path + "/Contents/Info.plist",
+          bundle_identifier,
+          "© %s %s. All rights reserved." % (date.today().year, author))
+code_sign(code_sign_identity,
+          app_path,
+          entitlements="../../entitlements.plist",
+          enable_hardened_runtime=True)
+try:
+    upload_to_notary(app_path,
+                     bundle_identifier,
+                     apple_email,
+                     "@keychain:AC_PASSWORD",
+                     provider=apple_provider)
+except CalledProcessError:
+    print("\033[31;1mNotarization request failed. Aborting.\033[0m")
+    sys.exit(1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There's also some documentation that you can read at &lt;a href="https://marquiskurt.net/renpy-distribute-tools/"&gt;https://marquiskurt.net/renpy-distribute-tools/&lt;/a&gt; to know what functions are available for use.&lt;/p&gt;&lt;/div&gt;</description><category>distribute</category><category>tools</category><guid>https://unscripted.marquiskurt.net/posts/2020/01/04/releasing-the-distribution-tools/</guid><pubDate>Sat, 04 Jan 2020 18:31:07 GMT</pubDate></item></channel></rss>

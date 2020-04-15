@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Releasing the distribution tools - Unscripted Devlog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../../../../assets/css/modernscale.css">
+<link rel="stylesheet" href="../../../../../assets/css/mastina.css">
+<link rel="stylesheet" href="../../../../../assets/css/dracula.css">
+<link rel="stylesheet" href="../../../../../assets/css/mastina-dark.css" media="(prefers-color-scheme: dark)">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="apple-touch-icon" sizes="180x180" href="../../../../../assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../../../assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../../../assets/icons/favicon-16x16.png">
+<link rel="manifest" href="../../../../../assets/icons/site.webmanifest">
+<link rel="mask-icon" href="../../../../../assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#ff0097">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Releasing the distribution tools - Unscripted Devlog">
+<meta property="article:author" content="© 2020 Marquis Kurt.">
+<meta property="og:description" content="Today, the tools used to make the Mac versions of Unscripted possible have been released.">
+<meta property="og:url" content="https://unscripted.marquiskurt.net/">
+<meta property="og:image" content="/assets/favicons/android-chrome-192x192.png">
+<meta property="”og:type”" content="”website”">
+</head>
+<body>
+<nav class="ms-navbar-container "><div class="ms-navbar">
+        <button class="ms-navbar-menu-button" onclick="toggleZip()">
+            <i data-feather="menu">Menu</i>
+        </button>
+        <a href="https://unscripted.marquiskurt.net/" class="ms-navbar-logo">
+            <img src="../../../../../assets/img/logomark.svg" alt="Unscripted"></a>
+        <ul class="ms-navbar-links">
+<li><a href="https://discord.gg/CXxnVhX">Discord</a></li>
+                <li><a href="https://1n.pm/AsuXE">Report a Bug</a></li>
+                <li><a href="https://marquiskurt.itch.io/unscripted">Download</a></li>
+                <li><a href="https://github.com/UnscriptedVN">GitHub</a></li>
+        </ul>
+</div>
+</nav><main class="ms-body"><style>
+.twitter-tweet {
+    background: #e3f2fd;
+    color: #333333;
+    border-left-color: #42a5f5;
+    border-left-style: solid;
+    border-left-width: 4px;
+    padding: 1em .75em;
+    font-size: 1.1em;
+}
+
+p {
+    font-size: 1.05em;
+}
+img {
+    width: 75%;
+    margin: auto;
+}
+
+@media(max-width:768px) {
+    img {
+        width: 100%;
+    }
+}
+</style>
+<div class="ms-strip darker thicker">
+    <h1 class="ms-strip-margins">Releasing the distribution tools</h1>
+    <p>Written on January 04, 2020</p>
+    <p>Tags:
+            <a href="../../../../../categories/distribute/"> distribute</a>
+            <a href="../../../../../categories/tools/"> tools</a>
+    </p>
+</div>
+<div class="ms-strip">
+    <div>
+<p>Howdy!</p>
+<p>Today, I'm releasing the tools that I have written to make Ren'Py distribution for the Mac a bit easier. This package, <code>renpy-distribute-tools</code>, is an open-source module for Python 3 and is Poetry-compatible.</p>
+<h3>Why not <code>renpy/mac-notarization</code>?</h3>
+<p>I started developing the tools before the scripts published on the Ren'Py GitHub were uploaded. Initially, the tools were bundled in the same place where I develop Unscripted, but I've moved them elsewhere when modernizing the Unscripted project. These tools also are just a bunch of Python functions and classes, so you can integrate them more easily into your workflow.</p>
+<h3>How to get it</h3>
+<p>You can get the tools at <a href="https://github.com/alicerunsonfedora/renpy-distribute-tools">https://github.com/alicerunsonfedora/renpy-distribute-tools</a> via GitHub. You can either download the latest release, clone the source code manually, or add them as a dependency to your Poetry project if you're using <a href="https://python-poetry.org">Poetry</a> to manage your VN:</p>
+<pre><code class="language-toml">[tool.poetry.dev-dependencies]
+renpy-distribute-tools = { git = "https://github.com/alicerunsonfedora/renpy-distribute-tools.git", rev = "v0.2.2" }
+</code></pre>
+<h3>How to use it</h3>
+<p>The tools don't come with any pre-built scripts like the Mac notarization tools provided by Ren'Py, but you can call the methods in the module to simplify the process.</p>
+<p>For instance, if you want to fix the property list for the Mac build, code sign, and notarize it:</p>
+<pre><code class="language-python">from renpy_distribute_tools import fix_plist, code_sign, upload_to_notary
+
+author = "Joe Smith"
+bundle_identifier = "com.example.my-vn"
+code_sign_identity = "Developer ID Application: Joe Smith (XXXXXXXXXX)"
+app_path = "VN-1.0.0-dists/VN-1.0.0-mac/VN.app"
+apple_email = "example.joesmith@icloud.com"
+apple_provider = "XXXXXXXXXX"
+
+fix_plist(app_path + "/Contents/Info.plist",
+          bundle_identifier,
+          "© %s %s. All rights reserved." % (date.today().year, author))
+code_sign(code_sign_identity,
+          app_path,
+          entitlements="../../entitlements.plist",
+          enable_hardened_runtime=True)
+try:
+    upload_to_notary(app_path,
+                     bundle_identifier,
+                     apple_email,
+                     "@keychain:AC_PASSWORD",
+                     provider=apple_provider)
+except CalledProcessError:
+    print("\033[31;1mNotarization request failed. Aborting.\033[0m")
+    sys.exit(1)
+</code></pre>
+<p>There's also some documentation that you can read at <a href="https://marquiskurt.net/renpy-distribute-tools/">https://marquiskurt.net/renpy-distribute-tools/</a> to know what functions are available for use.</p>
+</div>
+</div>
+        </main><footer class="ms-footer"><p><small>© 2019-2020         <a href="mailto:unscriptedvn@marquiskurt.net">Marquis Kurt</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </small></p>
+    <div>
+        <ul class="ms-footer-links">
+<li><a href="../../../../../pages/privacy_policy/">Privacy Policy</a></li>
+                <li><a href="../../../../../pages/contributions/">Contributions</a></li>
+                <li><a href="https://twitter.com/UnscriptedVN">Twitter</a></li>
+                <li><a href="https://youtrack.marquiskurt.net/youtrack/issues/UVN">YouTrack</a></li>
+                <li><a href="../../../../../archive.html">Devlog Archive</a></li>
+                <li><a href="../../../../../categories/">Tags</a></li>
+                <li><a href="../../../../../rss.xml">RSS</a></li>
+        </ul>
+</div>
+</footer><script src="../../../../../assets/js/mastina-utils.js"></script><script src="../../../../../assets/js/feather.min.js"></script><script src="../../../../../assets/js/highlight.pack.js"></script><script>
+        feather.replace();
+        hljs.initHighlightingOnLoad();
+    </script>
+</body>
+</html>

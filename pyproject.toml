@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "unscriptedvn.github.io"
+version = "0.1.0"
+description = ""
+authors = ["Marquis Kurt <software@marquiskurt.net>"]
+
+[tool.poetry.scripts]
+site-dev = "unscriptedvn_github_io:site_dev"
+site-generate-post = "unscriptedvn_github_io:site_post"
+site-deploy = "unscriptedvn_github_io:site_deploy"
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.6"
+nikola = "^8.0.4"
+commonmark = "^0.9.1"
+jinja2 = "^2.11.2"
+aiohttp = "^3.6.2"
+watchdog = "^0.10.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

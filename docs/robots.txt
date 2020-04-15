@@ -1,0 +1,4 @@
+Sitemap: https://unscripted.marquiskurt.net/sitemapindex.xml
+
+User-Agent: *
+Host: unscripted.marquiskurt.net
