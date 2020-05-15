@@ -144,7 +144,7 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("https://discord.gg/CXxnVhX", "Discord"),
-        ("https://1n.pm/AsuXE", "Report a Bug"),
+        ("https://github.com/UnscriptedVN/issues/issues/new/choose", "Report a Bug"),
         ("https://marquiskurt.itch.io/unscripted", "Download"),
         ("https://github.com/UnscriptedVN", "GitHub"),
     ),
@@ -158,7 +158,7 @@ NAVIGATION_ALT_LINKS = {
         ("/pages/privacy_policy/", "Privacy Policy"),
         ("/pages/contributions/", "Contributions"),
         ("https://twitter.com/UnscriptedVN", "Twitter"),
-        ("https://youtrack.marquiskurt.net/youtrack/issues/UVN", "YouTrack"),
+        ("https://github.com/UnscriptedVN/issues/issues/", "Issues"),
         ("/archive.html", "Devlog Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS"),
