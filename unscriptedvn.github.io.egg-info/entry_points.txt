@@ -1,0 +1,5 @@
+[console_scripts]
+site-deploy = unscriptedvn_github_io:site_deploy
+site-dev = unscriptedvn_github_io:site_dev
+site-generate-post = unscriptedvn_github_io:site_post
+

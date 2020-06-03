@@ -31,7 +31,8 @@
         <a href="https://unscripted.marquiskurt.net/" class="ms-navbar-logo">
             <img src="assets/img/logo.svg" alt="Unscripted"></a>
         <ul class="ms-navbar-links">
-<li><a href="https://discord.gg/CXxnVhX">Discord</a></li>
+<li><a href="index.html#stickers">Stickers</a></li>
+                <li><a href="https://discord.gg/CXxnVhX">Discord</a></li>
                 <li><a href="https://github.com/UnscriptedVN/issues/issues/new/choose">Report a Bug</a></li>
                 <li><a href="https://marquiskurt.itch.io/unscripted">Download</a></li>
                 <li><a href="https://github.com/UnscriptedVN">GitHub</a></li>
@@ -70,7 +71,72 @@
         <img class="ms-shadowed strong" src="assets/img/preview4.png">
 </div>
 </div>
+<div id="stickers" class="ms-strip grid-half ms-front-container">
+    <div class="pa-1">
+        <h3>Get Unscripted stickers for Telegram and iMessage*</h3>
+        <p>Send stickers of your favorite Unscripted characters to your friends, colleagues, and family on Telegram and iMessage*!</p>
+        <p class="sticker-buttons">
+            <a href="https://t.me/addstickers/Unstickered" class="ms-cta-button telegram">
+                <i data-feather="send"></i> Add to Telegram
+            </a>
+            <a disabled class="disabled apple">
+                <img src="assets/img/apple.svg"></a>
+        </p>
+        <small>*iMessage app will be made available soon; stay tuned!</small>
+    </div>
+    <div class="pa-1" style="text-align:center;">
+        <img src="assets/img/imessage.png" style="width:50%;">
+</div>
+</div>
+<style>
+.sticker-buttons {
+    display:flex;
+    height:46px;
+    justify-content: center;
+    justify-items: center;
+}
 
+.sticker-buttons .telegram {
+    background-color: #0088cc;
+    color: white;
+}
+
+.sticker-buttons a.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.sticker-buttons .apple {
+    padding-left: 12px;
+    height: 100%;
+}
+
+.sticker-buttons .apple img {
+    height: 100%;
+}
+
+@media(max-width:768px) {
+    .sticker-buttons {
+        display:flex;
+        height:100%;
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .sticker-buttons a {
+        padding: 10px;
+    }
+
+    .sticker-buttons .apple {
+        padding-left: inherit;
+    }
+
+    .sticker-buttons .apple img {
+        height: 48px;
+    }
+}
+</style>
 <div class="ms-strip thicker grid-thirds">
         <div class="pa-1">
             <a href="posts/2020/05/15/v123-has-been-released-and-a-new-issue-tracker/"><h3 class="ms-strip-margins">v1.2.3 has been released, and a new issue tracker!</h3></a>

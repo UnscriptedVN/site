@@ -143,6 +143,7 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ("/index.html#stickers", "Stickers"),
         ("https://discord.gg/CXxnVhX", "Discord"),
         ("https://github.com/UnscriptedVN/issues/issues/new/choose", "Report a Bug"),
         ("https://marquiskurt.itch.io/unscripted", "Download"),
