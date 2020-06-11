@@ -1,0 +1,21 @@
+{% import 'base_helper.tmpl' as base with context %}
+{{ set_locale(lang) }}
+{% extends "base.tmpl" %}
+
+{% block title %}Page Not Found - {{ blog_title }}{% endblock %}
+{% block og_title %}Page Not Found - {{ blog_title }}{% endblock %}
+{% set use_navbar = True %}
+
+{% block content %}
+<div class="ms-strip thicker">
+    <div style="text-align:center;">
+        <h1 style="font-size:5rem;margin-bottom:4px;">404</h1>
+        <h4 style="font-size:1.5rem;">Page not found</h4>
+        <p>The requested page you're looking for couldn't be found. It may have been moved or deleted.</p>
+        <br/>
+        <p>
+            <a href="/index.html" class="ms-button"><i data-feather="home"></i>Go Home</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
