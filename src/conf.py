@@ -145,7 +145,7 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/index.html#stickers", "Stickers"),
         ("https://discord.gg/CXxnVhX", "Discord"),
-        ("https://github.com/UnscriptedVN/issues/issues/new/choose", "Report a Bug"),
+        # ("https://github.com/UnscriptedVN/issues/issues/new/choose", "Report a Bug"),
         ("https://marquiskurt.itch.io/unscripted", "Download"),
         ("https://github.com/UnscriptedVN", "GitHub"),
     ),
@@ -156,9 +156,9 @@ NAVIGATION_LINKS = {
 # (Bootstrap 4: right-side of navbar, Bootblog 4: right side of title)
 NAVIGATION_ALT_LINKS = {
     DEFAULT_LANG: (
+        ("https://twitter.com/UnscriptedVN", "@UnscriptedVN"),
         ("/pages/privacy_policy/", "Privacy Policy"),
         ("/pages/contributions/", "Contributions"),
-        ("https://twitter.com/UnscriptedVN", "Twitter"),
         ("https://github.com/UnscriptedVN/issues/issues/", "Issues"),
         ("/archive.html", "Devlog Archive"),
         ("/categories/", "Tags"),

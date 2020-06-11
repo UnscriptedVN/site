@@ -33,7 +33,6 @@
         <ul class="ms-navbar-links">
 <li><a href="index.html#stickers">Stickers</a></li>
                 <li><a href="https://discord.gg/CXxnVhX">Discord</a></li>
-                <li><a href="https://github.com/UnscriptedVN/issues/issues/new/choose">Report a Bug</a></li>
                 <li><a href="https://marquiskurt.itch.io/unscripted">Download</a></li>
                 <li><a href="https://github.com/UnscriptedVN">GitHub</a></li>
         </ul>
@@ -43,8 +42,10 @@
             <h2>Follow your developer dreams</h2>
             <p class="ms-front-jumbo-text">Choose your route. Take on your developer dream in Catalina City. Make new friends and enemies. Get your game published.
 </p>
-            <p class="ms-front-cta"><a href="https://marquiskurt.itch.io/unscripted" class="ms-cta-button"><i data-feather="shopping-cart"></i> Get the demo</a>
-</p>
+            <p class="ms-front-cta"></p>
+<p><span id="itch_download" class="ms-cta-button"><i data-feather="shopping-cart"></i> Get the demo</span></p>
+<p><small>Or <a class="ms-fp-alt_link" href="https://marquiskurt.itch.io/unscripted" rel="noreferrer noopener">view on Itch.io ›</a></small></p>
+
         </div>
         <div style="padding-bottom:0;">
     <img src="assets/img/cast.png" style="transform:matrix(1.2, 0, 0, 1.2, 0, -16);">
@@ -55,7 +56,7 @@
 <div class="ms-strip" style="z-index:2;position:relative;">
     <p>Take on your developer dream in Catalina City in <i>Unscripted</i>! Follow the journey of a software developer aspiring to publish their video game into the PackStore's prestigious arcade while starting a new life in Catalina City, the city for software developers. Reconnect and meet close friends like Zen'no, new peers like Katorin, the Kotlin-loving developer, and possibly new enemies like Christina, an enigmatic Python developer.</p>
 </div>
-<div class="ms-strip grid-half">
+<div class="ms-strip grid-half" style="padding-bottom: 0;">
     <div class="pa-1">
         <img class="ms-shadowed strong" src="assets/img/preview1.png">
 </div>
@@ -63,7 +64,7 @@
         <img class="ms-shadowed strong" src="assets/img/preview2.png">
 </div>
 </div>
-<div class="ms-strip grid-half">
+<div class="ms-strip grid-half" style="padding-top:0;">
     <div class="pa-1">
         <img class="ms-shadowed strong" src="assets/img/preview3.png">
 </div>
@@ -76,18 +77,28 @@
         <h3>Get Unscripted stickers for Telegram and iMessage</h3>
         <p>Send stickers of your favorite Unscripted characters to your friends, colleagues, and family on Telegram and iMessage!</p>
         <p class="sticker-buttons">
+            <a href="https://apps.apple.com/app/id1515546896" class="apple">
+                <img src="assets/img/apple.svg"></a>
             <a href="https://t.me/addstickers/Unstickered" class="ms-cta-button telegram">
                 <i data-feather="send"></i> Add to Telegram
             </a>
-            <a href="https://apps.apple.com/app/id1515546896" class="apple">
-                <img src="assets/img/apple.svg"></a>
         </p>
     </div>
     <div class="pa-1" style="text-align:center;">
         <img src="assets/img/imessage.png" style="width:50%;">
 </div>
 </div>
-<style>
+<script type="text/javascript" src="https://static.itch.io/api.js"></script><script type="text/javascript" src="assets/js/itchy.js"></script><script type="text/javascript">
+window.onload = () => linkGameButton();
+</script><style>
+.ms-fp-alt_link {
+    color: var(--color-link);
+}
+
+.ms-fp-alt_link:hover {
+    color: #9135e0;
+}
+
 div#stickers {
     color: var(--color-special-text);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url(assets/img/random/2.png);
@@ -115,7 +126,7 @@ div#stickers {
 }
 
 .sticker-buttons .apple {
-    padding-left: 12px;
+    padding-right: 12px;
     height: 100%;
 }
 
@@ -145,23 +156,29 @@ div#stickers {
 }
 </style>
 <div class="ms-strip thicker grid-thirds">
-        <div class="pa-1">
-            <a href="posts/2020/05/15/v123-has-been-released-and-a-new-issue-tracker/"><h3 class="ms-strip-margins">v1.2.3 has been released, and a new issue tracker!</h3></a>
+        <div class="pa-1 ms-posts" style="display:flex; flex-direction:column;">
+            <a href="posts/2020/05/15/v123-has-been-released-and-a-new-issue-tracker/"><h4 class="ms-strip-margins">v1.2.3 has been released, and a new issue tracker!</h4></a>
             <small class="ms-header-text ms-strip-margins">Written on May 15, 2020</small>
-            <p>I've pushed out a new update to the extended demo (v1.2.3) and have migrated new issues to GitHub.</p>
-            <a class="ms-button" href="posts/2020/05/15/v123-has-been-released-and-a-new-issue-tracker/"><i data-feather="book"></i>Read more</a>
+            <p style="flex-grow: 1;">I've pushed out a new update to the extended demo (v1.2.3) and have migrated new issues to GitHub.</p>
+            <p style="text-align: center;">
+                <a class="ms-button" href="posts/2020/05/15/v123-has-been-released-and-a-new-issue-tracker/"><i data-feather="book"></i>Read more</a>
+            </p>
         </div>
-        <div class="pa-1">
-            <a href="posts/2020/04/25/v120-extended-demo-is-here/"><h3 class="ms-strip-margins">v1.2.0 (Extended Demo) is here!</h3></a>
+        <div class="pa-1 ms-posts" style="display:flex; flex-direction:column;">
+            <a href="posts/2020/04/25/v120-extended-demo-is-here/"><h4 class="ms-strip-margins">v1.2.0 (Extended Demo) is here!</h4></a>
             <small class="ms-header-text ms-strip-margins">Written on April 25, 2020</small>
-            <p>The extended demo release is finally here! This post covers the major notes about this release.</p>
-            <a class="ms-button" href="posts/2020/04/25/v120-extended-demo-is-here/"><i data-feather="book"></i>Read more</a>
+            <p style="flex-grow: 1;">The extended demo release is finally here! This post covers the major notes about this release.</p>
+            <p style="text-align: center;">
+                <a class="ms-button" href="posts/2020/04/25/v120-extended-demo-is-here/"><i data-feather="book"></i>Read more</a>
+            </p>
         </div>
-        <div class="pa-1">
-            <a href="posts/2020/04/02/devlog-march-april-2020/"><h3 class="ms-strip-margins">Captain's Devlog: March-April 2020</h3></a>
+        <div class="pa-1 ms-posts" style="display:flex; flex-direction:column;">
+            <a href="posts/2020/04/02/devlog-march-april-2020/"><h4 class="ms-strip-margins">Captain's Devlog: March-April 2020</h4></a>
             <small class="ms-header-text ms-strip-margins">Written on April 02, 2020</small>
-            <p>It's been a while since any activity regarding Unscripted has been published. This post will cover what's been going on behind the scenes.</p>
-            <a class="ms-button" href="posts/2020/04/02/devlog-march-april-2020/"><i data-feather="book"></i>Read more</a>
+            <p style="flex-grow: 1;">It's been a while since any activity regarding Unscripted has been published. This post will cover what's been going on behind the scenes.</p>
+            <p style="text-align: center;">
+                <a class="ms-button" href="posts/2020/04/02/devlog-march-april-2020/"><i data-feather="book"></i>Read more</a>
+            </p>
         </div>
 </div>
         </main>
@@ -169,9 +186,9 @@ div#stickers {
 <footer class="ms-footer"><p><small>© 2019-2020         <a href="mailto:unscriptedvn@marquiskurt.net">Marquis Kurt</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>          | <a href="https://github.com/UnscriptedVN/mastina">View theme on GitHub</a></small></p>
     <div>
         <ul class="ms-footer-links">
-<li><a href="pages/privacy_policy/">Privacy Policy</a></li>
+<li><a href="https://twitter.com/UnscriptedVN">@UnscriptedVN</a></li>
+                <li><a href="pages/privacy_policy/">Privacy Policy</a></li>
                 <li><a href="pages/contributions/">Contributions</a></li>
-                <li><a href="https://twitter.com/UnscriptedVN">Twitter</a></li>
                 <li><a href="https://github.com/UnscriptedVN/issues/issues/">Issues</a></li>
                 <li><a href="archive.html">Devlog Archive</a></li>
                 <li><a href="categories/">Tags</a></li>
