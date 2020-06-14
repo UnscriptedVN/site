@@ -143,10 +143,10 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ("https://marquiskurt.itch.io/unscripted", "Download"),
         ("/index.html#stickers", "Stickers"),
         ("https://discord.gg/CXxnVhX", "Discord"),
         # ("https://github.com/UnscriptedVN/issues/issues/new/choose", "Report a Bug"),
-        ("https://marquiskurt.itch.io/unscripted", "Download"),
         ("https://github.com/UnscriptedVN", "GitHub"),
     ),
 }
@@ -158,8 +158,9 @@ NAVIGATION_ALT_LINKS = {
     DEFAULT_LANG: (
         ("https://twitter.com/UnscriptedVN", "@UnscriptedVN"),
         ("/pages/privacy_policy/", "Privacy Policy"),
-        ("/pages/contributions/", "Contributions"),
         ("https://github.com/UnscriptedVN/issues/issues/", "Issues"),
+        ("/pages/playtests/", "Playtesting Program"),
+        ("/pages/contributions/", "Contributions"),
         ("/archive.html", "Devlog Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS"),
@@ -1188,7 +1189,7 @@ SEARCH_FORM = """
 <input type="hidden" name="k1" value="-1">
 <input type="text" name="q" maxlength="255"
  placeholder="Search (DuckDuckGo)&hellip;" style="margin-top: 4px;">
-<input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="submit" value="Search">
 </form>
 """ % SITE_URL
 #

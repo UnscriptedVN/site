@@ -5,11 +5,25 @@
 Unscripted is a game about software development created by [Marquis Kurt](https://marquiskurt.net), but it also contains contributions from other people to make Unscripted possible.
 
 ## Primary Contributors
+
 Primary contributors are considered members of the Unscripted team and have direct contributions to the project.
 
 - Raseruuu (@Raseruuu), for sprite artwork
 - Stray Objects, for background music
-- Nomad, Chronos, Terra, Seantience, Peanut, and Masutan for beta testing 
+
+## Testing Contributors
+
+Testing contributors are the playtesters that have made Unscripted possible.
+
+- Nomad
+- Chronos
+- Terra
+- John Patrick
+- Peanut
+- Masutan
+- nd
+- tcyrus
+- Noy Telinu
 
 ## Secondary Contributors
 
@@ -23,3 +37,4 @@ Secondary contributors aren't necessarily a part of the team, but their work has
 - Gustavo (somberdemise), for the `discord-rpc` Python library
 - Lexend designers, for Lexend font
 - Rasmus Andersson, for Inter font
+- dempfi, for Ayu color scheme
