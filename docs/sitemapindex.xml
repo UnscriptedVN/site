@@ -6,43 +6,51 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>https://unscripted.marquiskurt.net/categories/beta.xml</loc>
+  <lastmod>2020-06-15T13:03:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://unscripted.marquiskurt.net/categories/bugfix.xml</loc>
-  <lastmod>2020-06-15T12:47:00Z</lastmod>
+  <lastmod>2020-06-15T13:02:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://unscripted.marquiskurt.net/categories/demo.xml</loc>
-  <lastmod>2020-06-15T12:47:00Z</lastmod>
+  <lastmod>2020-06-15T13:02:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://unscripted.marquiskurt.net/categories/devlog.xml</loc>
-  <lastmod>2020-06-15T12:47:00Z</lastmod>
+  <lastmod>2020-06-15T13:03:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://unscripted.marquiskurt.net/categories/distribute.xml</loc>
-  <lastmod>2020-06-15T12:47:00Z</lastmod>
+  <lastmod>2020-06-15T13:02:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://unscripted.marquiskurt.net/categories/feature.xml</loc>
-  <lastmod>2020-06-15T12:47:00Z</lastmod>
+  <lastmod>2020-06-15T13:02:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://unscripted.marquiskurt.net/categories/github.xml</loc>
-  <lastmod>2020-06-15T12:47:00Z</lastmod>
+  <lastmod>2020-06-15T13:02:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://unscripted.marquiskurt.net/categories/testing.xml</loc>
+  <lastmod>2020-06-15T13:03:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://unscripted.marquiskurt.net/categories/tools.xml</loc>
-  <lastmod>2020-06-15T12:47:00Z</lastmod>
+  <lastmod>2020-06-15T13:02:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://unscripted.marquiskurt.net/categories/update.xml</loc>
-  <lastmod>2020-06-15T12:47:00Z</lastmod>
+  <lastmod>2020-06-15T13:02:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://unscripted.marquiskurt.net/rss.xml</loc>
-  <lastmod>2020-06-15T12:47:00Z</lastmod>
+  <lastmod>2020-06-15T13:03:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://unscripted.marquiskurt.net/sitemap.xml</loc>
-  <lastmod>2020-06-15T12:47:00Z</lastmod>
+  <lastmod>2020-06-15T13:03:00Z</lastmod>
  </sitemap>
 </sitemapindex>

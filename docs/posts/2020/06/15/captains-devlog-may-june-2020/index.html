@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Captain's Devlog: May-June 2020 - Unscripted Devlog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../../../../assets/css/modernscale.css">
+<link rel="stylesheet" href="../../../../../assets/css/mastina.css">
+<link rel="stylesheet" href="../../../../../assets/css/ayu.css">
+<link rel="stylesheet" href="../../../../../assets/css/mastina-dark.css" media="(prefers-color-scheme: dark)">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="apple-touch-icon" sizes="180x180" href="../../../../../assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../../../assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../../../assets/icons/favicon-16x16.png">
+<link rel="manifest" href="../../../../../assets/icons/site.webmanifest">
+<link rel="mask-icon" href="../../../../../assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#ff0097">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Captain's Devlog: May-June 2020 - Unscripted Devlog">
+<meta property="article:author" content="© 2020 Marquis Kurt.">
+<meta property="og:description" content="I discuss the latest changes in the development builds of Unscripted and outline what's been happening.">
+<meta property="og:url" content="https://unscripted.marquiskurt.net/">
+<meta property="og:image" content="/assets/favicons/android-chrome-192x192.png">
+<meta property="”og:type”" content="”website”">
+</head>
+<body>
+<nav class="ms-navbar-container " style="z-index:15;position:relative;"><div class="ms-navbar">
+        <button class="ms-navbar-menu-button" onclick="toggleZip()">
+            <i data-feather="menu">Menu</i>
+        </button>
+        <a href="https://unscripted.marquiskurt.net/" class="ms-navbar-logo">
+            <img src="../../../../../assets/img/logo.svg" alt="Unscripted"><span>Unscripted</span>
+
+        </a>
+        <div class="ms-navbar-mobile_togglable">
+            <ul class="ms-navbar-links">
+<li><a href="https://marquiskurt.itch.io/unscripted">Download</a></li>
+                    <li><a href="../../../../../index.html#stickers">Stickers</a></li>
+                    <li><a href="https://discord.gg/CXxnVhX">Discord</a></li>
+                    <li><a href="https://github.com/UnscriptedVN">GitHub</a></li>
+            </ul>
+<div class="ms-navbar-search">
+                <div style="flex-grow: 1;"></div>
+
+<form method="get" id="search" action="https://duckduckgo.com/">
+<input type="hidden" name="sites" value="https://unscripted.marquiskurt.net/"><input type="hidden" name="k8" value="#6C7680"><input type="hidden" name="k9" value="#55B4D4"><input type="hidden" name="kx" value="#86B300"><input type="hidden" name="kae" value="#FAFAFA"><input type="hidden" name="kt" value="h"><input type="hidden" name="k1" value="-1"><input type="text" name="q" maxlength="255" placeholder="Search (DuckDuckGo)…" style="margin-top: 4px;"><input type="submit" value="Search">
+</form>
+            </div>
+        </div>
+    </div>
+</nav><main class="ms-body"><style>
+.post {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.post-content {
+    grid-column-start: 1;
+    grid-column-end: 10;
+}
+
+.twitter-tweet {
+    background: #e3f2fd;
+    color: #333333;
+    border-left-color: #42a5f5;
+    border-left-style: solid;
+    border-left-width: 4px;
+    padding: 1em .75em;
+    font-size: 1.1em;
+}
+
+p {
+    font-size: 1.05em;
+}
+img {
+    width: 75%;
+    margin: auto;
+}
+
+@media(max-width:768px) {
+    img {
+        width: 100%;
+    }
+
+    .post {
+        display: block;
+    }
+}
+</style>
+<div class="ms-strip darker use-special thicker">
+    <h1 class="ms-strip-margins">Captain's Devlog: May-June 2020</h1>
+    <p>Written on June 15, 2020</p>
+    <p>Tags:
+            <a class="use-special" href="../../../../../categories/beta/"> beta</a>
+            <a class="use-special" href="../../../../../categories/devlog/"> devlog</a>
+            <a class="use-special" href="../../../../../categories/testing/"> testing</a>
+    </p>
+</div>
+<div class="ms-strip post">
+    <div class="post-content">
+        <div>
+<p>It's been about a couple of months since I wrote the last devlog that outline what's been going on, and I figured it's time for me to do the same thing again since I haven't posted much on the official site. Here's a rundown of what's been happing the past few weeks with Unscripted.</p>
+<h3>Extended demo updates</h3>
+<p>Recently, I published the v1.2.4 release of the extended demo, which contained a couple of bugfixes and improvements:</p>
+<ul>
+<li>Resolves an issue where the AliceOS desktop could be called infinitely on the call stack.</li>
+<li>Adds argument options via arguments.toml.</li>
+<li>Adds a glossary page in Help with terms and definitions.</li>
+<li>Adds use cases for inventory items in some parts of the game.</li>
+<li>Changes notification toast when an item is received to the game’s default, not AliceOS’s.</li>
+<li>Removes documented features in Help that don’t exist.</li>
+</ul>
+<p>I imagine that, unless there are major flaws in the current release of the extended demo, there won't be any future updates as development builds will most likely break compatibility with older releases.</p>
+<h3>Hello, Ayu</h3>
+<p>Over the past two weeks, I've been working on making Unscripted's user interface and brand consistent. Part of this included reconsidering the color scheme and general user interface look. After some deliberation, I've worked on implementing a variation of the popular <a href="https://github.com/ayu-theme/ayu-colors">Ayu color scheme</a> as the theme for Unscripted. Ayu offers vibrant colors and a great set of colors to work with.</p>
+<img src="../../../../../assets/img/posts/ayu-scrn.png" class="ms-shadowed"><p style="margin-top:2px">
+    <small>In-game screenshot of Ayu Light theme.</small>
+</p>
+<img src="../../../../../assets/img/posts/ayu-prefs.png" class="ms-shadowed"><p style="margin-top:2px">
+    <small>Appearance page in Ayu Dark theme.</small>
+</p>
+<p>Since Ayu offers light, blue, and dark variations of the color scheme, I've implemented a new theme system for the game and include all three variations. The official website also got a bit of a makeover to include the new colors, as well as the Itch.io page. I've also implemented some quality-of-life additions to the game to customize its appearance:</p>
+<ul>
+<li>You can now select which font you want to use for dialogue as well as its size.</li>
+<li>The Merriweather and OpenDyslexic fonts have been added as font options.</li>
+<li>The Lexend fonts are now a sub-page to Appearance (<strong>Settings</strong> › <strong>Appearance</strong> › <strong>Dialogue font</strong> › <strong>Lexend...</strong>) instead of a slider. This should hopefully resolve some font selection issues.</li>
+</ul>
+<h3>Calling all playtesters</h3>
+<p><img src="../../../../../assets/img/playtest.png" alt="Playtesting Program promo image"></p>
+<p>Within the past months, I've also been on the hunt for playtesters to get feedback of the game as it's being developed. I've consulted people on Twitter, Reddit, and Discord as I continue to work on the game. I've gotten feedback from a few people and have made improvements to the game as I receive more suggestions. Previously, I had been only accepting members on a limited basis since I was still working out the kinks in the system.</p>
+<p>Now that everything's all organized and ready to go, I've decided to open the game up to more playtesters on a semi-public beta program known as the <strong>Unscripted Playtesting Program</strong>. The playtesting program is a great way to get involved and give feedback on the project as I develop it. The new <a href="../../../../../pages/playtests/">playtesting program page</a> outlines the process, requirements, and what happens in the beta program. I welcome and encourage players to try out the latest development builds and help make Unscripted reach its full potential.</p>
+<h3>Unscripted ♥️ open-source and GitHub</h3>
+<p>Back in late 2019/early 2020, I released the <a href="https://pypi.org/project/renpy-distribute-tools">Ren'Py Distribution Tools</a> module (<code>renpy-distribute-tools</code>) as an open-source module on GitHub to help streamline distribution of visual novel projects. This module has made its way to PyPI and migrated over to a new place on GitHub for all Unscripted-related code.</p>
+<p><img src="../../../../../assets/img/posts/gh.png" alt="GitHub organization page"></p>
+<p>Since then, there have been a couple of other repositories open:</p>
+<ul>
+<li>
+<a href="https://github.com/UnscriptedVN/mastina"><code>mastina</code></a>, a Nikola theme for the Unscripted website</li>
+<li>
+<a href="https://github.com/UnscriptedVN/fira"><code>fira</code></a>, the backend and API mechanisms for the current minigame</li>
+</ul>
+<p>You might also recall in an earlier post that a <a href="https://github.com/UnscriptedVN/issues">new GitHub repository is available</a> to report bugs and request features for the game, which replaced YouTrack. GitHub is also where a lot of work on Unscripted takes place, ranging from the minigame to the core story. With the new playtesting program in place, this also is where a lot of developer builds for testing take place.</p>
+<p>Additionally, open-source software is what makes Unscripted possible; libraries such as <code>discord-rpc</code> and projects like Ren'Py, Inter, and Feather icons have helped bring Unscripted together to the game it is today. I make it a point to thank the open-source community by acknowledging them in both the credits and the game's license.</p>
+<p>So, why bring up open-source software and GitHub? I personally am a believer in open-source software; open-source software has helped me grow as a developer and has taught me a lot of valuable things. Open-source modding projects for DDLC have also taught me a lot of what I know with both Python and Ren'Py.</p>
+<p>I anticipate that some players and developers may want to better understand how I do some things in Unscripted or may want to contribute to the project to catch any bugs. I want to make Unscripted a place to go to learn new things and try out what's available with Python and Ren'Py just like how I did when making mods for DDLC, so I've decided that I will be open-sourcing some core utilities and modules inside of the game itself known as the Unscripted Core. In fact, I made this decision all the way back in <em>January</em>; some of the demo builds use this new open-source code!</p>
+<p>The game is mostly set up to handle open-sourcing Unscripted Core. In the final release of the game, the source code for Unscripted Core will be available right in the game as a standard Ren'Py archive. You can also expect to see the GitHub repository available in the following weeks, licensed under the Mozilla Public License v2.0, the same license used in Unscripted Fira, Mastina, and the Ren'Py Distribution Tools. I can't wait to reveal what's been under the hood.</p>
+<h3>An overhaul of the minigame... again...</h3>
+<p><img src="../../../../../assets/img/posts/mg.png" alt="Minigame"></p>
+<p>When I released the extended demo, I introduced a brand new minigame where players control a mastodon with a series of commands, either by clicking buttons or using Python, to collect a bunch of coins and reach the end of the map. After receiving some feedback from playtesters, I realize that the minigame isn't the most enjoyable thing in the world.</p>
+<p>I hope that, within the next month or so, I will have a fully working rewrite of the minigame with more appealing visuals, a coherent plot, and a new input mechanic. In the coming weeks, I also intend to rework the story a bit to turn the minigame into the game that the main character will eventually publish to the PackStore. I will post details on the progress I've made on the minigame as they get developed; I've got some exciting ideas that will be interesting to implement.</p>
+<hr>
+<p>I know this was a long devlog, but I thank you for reading all the way through. I look forward to sharing more information on Unscripted's progress!</p>
+<p>- Marquis</p>
+</div>
+    </div>
+</div>
+        </main><footer class="ms-footer"><p><small>© 2019-2020         <a href="mailto:unscriptedvn@marquiskurt.net">Marquis Kurt</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>          | <a href="https://github.com/UnscriptedVN/mastina">View theme on GitHub</a></small></p>
+    <div>
+        <ul class="ms-footer-links">
+<li><a href="https://twitter.com/UnscriptedVN">@UnscriptedVN</a></li>
+                <li><a href="../../../../../pages/privacy_policy/">Privacy Policy</a></li>
+                <li><a href="https://github.com/UnscriptedVN/issues/issues/">Issues</a></li>
+                <li><a href="../../../../../pages/playtests/">Playtesting Program</a></li>
+                <li><a href="../../../../../pages/contributions/">Contributions</a></li>
+                <li><a href="../../../../../archive.html">Devlog Archive</a></li>
+                <li><a href="../../../../../categories/">Tags</a></li>
+                <li><a href="../../../../../rss.xml">RSS</a></li>
+        </ul>
+</div>
+</footer><script src="../../../../../assets/js/mastina-utils.js"></script><script src="../../../../../assets/js/feather.min.js"></script><script src="../../../../../assets/js/highlight.pack.js"></script><script>
+        feather.replace();
+        hljs.initHighlightingOnLoad();
+    </script>
+</body>
+</html>
