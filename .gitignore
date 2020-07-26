@@ -4,3 +4,4 @@ src/cache/**
 **/.DS_Store
 src/output/**
 src/files/assets/.DS_Store
+**/__pycache__/**
