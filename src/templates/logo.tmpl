@@ -1,6 +1,10 @@
 {% import 'base_helper.tmpl' as base with context %}
 
 {% macro logo() %}
-<img src="/assets/img/logo.svg" alt="{{ blog_title }}"/>
+{% if 'index' in pagekind %}
+<img src="/assets/img/logo-bubble.svg" alt="{{ blog_title }}"/>
+{% else %}
+<img src="/assets/img/logo.svg" alt="{{ blog_title }}" style="height: 32px;"/>
+{% endif %}
 <span>Unscripted</span>
 {% endmacro %}
