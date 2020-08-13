@@ -24,7 +24,7 @@ BLOG_AUTHOR = "Marquis Kurt"  # (translatable)
 BLOG_TITLE = "Unscripted"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://unscripted.marquiskurt.net/"
+SITE_URL = "https://unscriptedvn.dev/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://unscripted.marquiskurt.net/"
@@ -650,7 +650,7 @@ REDIRECTIONS = []
 # in a `nikola deploy` command as you like.
 DEPLOY_COMMANDS = {
     'default': [
-        "echo unscripted.marquiskurt.net >> output/CNAME",
+        "echo unscriptedvn.dev >> output/CNAME",
         "touch output/.nojekyll",
         "mv output ../docs/",
     ]
