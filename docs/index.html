@@ -37,7 +37,7 @@
 <li><a href="https://marquiskurt.itch.io/unscripted">Download</a></li>
                     <li><a href="index.html#stickers">Stickers</a></li>
                     <li><a href="https://discord.gg/CXxnVhX">Discord</a></li>
-                    <li><a href="https://github.com/UnscriptedVN">GitHub</a></li>
+                    <li><a href="https://docs.unscriptedvn.dev">Docs</a></li>
             </ul>
 <div class="ms-navbar-search">
                 <div style="flex-grow: 1;"></div>
@@ -59,7 +59,7 @@
 </div>
         </div>
         <div style="padding-bottom:0;">
-    <img src="assets/img/cast.png" style="transform:matrix(1.2, 0, 0, 1.2, 0, -16);">
+    <img src="assets/img/cast.png" style="transform:matrix(1.2, 0, 0, 1.2, 0, -16);" id="px-cast">
 </div>
 
     </div>
@@ -67,7 +67,7 @@
 <link rel="stylesheet" href="assets/css/flickity.css">
 <div class="ms-strip grid-half" style="z-index:2;position:relative;">
     <div class="pa-1">
-        <p>Take on your developer dream in Catalina City in <i>Unscripted</i>! Follow the journey of a software developer aspiring to publish their video game into the PackStore's prestigious arcade while starting a new life in Catalina City, the city for software developers. Reconnect and meet close friends like Zen'no, new peers like Katorin, the Kotlin-loving developer, and possibly new enemies like Christina, an enigmatic Python developer.</p>
+        <p>Take on your developer dream in Catalina City in <i>Unscripted</i>! Follow the journey of a software developer aspiring to publish their video game into the PackStore's prestigious arcade while starting a new life in Catalina City, the city for software developers. Reconnect and meet close friends like Zen'no, new peers like Katorin, the Kotlin-loving developer and Meredith, a freelance typeface designer. Play through, debug, and exploit your game as you continue your daily routines. Encounter potential enemies like Christina, Catalina City's enigmatic Python developer.</p>
     </div>
     <div class="main-carousel pa-1">
         <div class="carousel-cell">
@@ -81,6 +81,9 @@
 </div>
         <div class="carousel-cell">
             <img class="ms-shadowed strong" src="assets/img/preview4.png">
+</div>
+        <div class="carousel-cell">
+            <img class="ms-shadowed strong" src="assets/img/preview5.png">
 </div>
     </div>
 </div>
@@ -100,7 +103,7 @@
         <img src="assets/img/imessage.png" style="width:50%;">
 </div>
 </div>
-<script type="text/javascript" src="https://static.itch.io/api.js"></script><script type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script><script type="text/javascript" src="assets/js/itchy.js"></script><script type="text/javascript" src="assets/js/utils.js"></script><script type="text/javascript">
+<script type="text/javascript" src="https://static.itch.io/api.js"></script><script type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script><script type="text/javascript" src="assets/js/simpleParallax.min.js"></script><script type="text/javascript" src="assets/js/itchy.js"></script><script type="text/javascript" src="assets/js/utils.js"></script><script type="text/javascript">
 window.onload = () => {
     linkGameButton();
     var elem = document.querySelector('.main-carousel');
@@ -110,6 +113,8 @@ window.onload = () => {
         pageDots: false,
         imagesLoaded: true
     });
+    var castImage = document.getElementById("px-cast");
+    new simpleParallax(castImage);
 };
 </script><style>
 .ms-navbar-container.transparent {
@@ -127,6 +132,10 @@ window.onload = () => {
 
 .ms-fp-alt_link:hover {
     color: #E6B673;
+}
+
+.simpleParallax {
+    overflow: initial !important;
 }
 
 div#stickers {
@@ -147,6 +156,10 @@ div#stickers {
 .sticker-buttons .telegram {
     background-color: #0088cc;
     color: white;
+}
+
+.sticker-buttons .telegram:hover {
+    background-color: #5cb8ff;
 }
 
 .sticker-buttons a.disabled {
@@ -225,12 +238,12 @@ div#stickers {
     <div>
         <ul class="ms-footer-links">
 <li><a href="https://twitter.com/UnscriptedVN">@UnscriptedVN</a></li>
+                <li><a href="https://github.com/UnscriptedVN">GitHub</a></li>
                 <li><a href="pages/privacy_policy/">Privacy Policy</a></li>
                 <li><a href="https://github.com/UnscriptedVN/issues/issues/">Issues</a></li>
                 <li><a href="pages/playtests/">Playtesting Program</a></li>
                 <li><a href="pages/contributions/">Contributions</a></li>
                 <li><a href="archive.html">Devlog Archive</a></li>
-                <li><a href="categories/">Tags</a></li>
                 <li><a href="rss.xml">RSS</a></li>
         </ul>
 </div>
