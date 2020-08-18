@@ -143,7 +143,7 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("https://marquiskurt.itch.io/unscripted", "Download"),
+        # ("https://marquiskurt.itch.io/unscripted", "Download"),
         ("/index.html#stickers", "Stickers"),
         ("https://discord.gg/CXxnVhX", "Discord"),
         ("https://docs.unscriptedvn.dev", "Docs"),
