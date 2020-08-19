@@ -37,6 +37,7 @@
 <li><a href="index.html#stickers">Stickers</a></li>
                     <li><a href="https://discord.gg/CXxnVhX">Discord</a></li>
                     <li><a href="https://docs.unscriptedvn.dev">Docs</a></li>
+                    <li><a href="https://github.com/UnscriptedVN">GitHub</a></li>
             </ul>
 <div class="ms-navbar-search">
                 <div style="flex-grow: 1;"></div>
@@ -53,39 +54,41 @@
             <p class="ms-front-jumbo-text">Choose your route. Take on your developer dream in Catalina City. Make new friends and enemies. Get your game published.
 </p>
             <div class="ms-front-cta">
-<p><small>We're working on cleaning up our call to action. Search for us on Itch.io to get a demo copy.</small></p>
-<!--
-<p><span id="itch_download" class="ms-cta-button"><i data-feather="shopping-cart"></i> Get the demo</span></p>
-<p><small>Or <a class="ms-fp-alt_link" href="https://marquiskurt.itch.io/unscripted" rel="noreferrer noopener">view on Itch.io &rsaquo;</a></small></p>
--->
+<div class="cta-buttons-container">
+    <a title="Wishlist on Steam" id="cta-steam" href="https://store.steampowered.com/app/1379980/Unscripted/" class="ms-button steam">
+        <img src="assets/img/steam.svg" alt="STEAM"></a>
+    <a title="Get on Itch.io" id="equine-loader" href="https://marquiskurt.itch.io/unscripted" class="ms-button itch">
+        <img src="assets/img/itchio-logo-white.svg" alt="Itch.io"></a>
+</div>
 </div>
         </div>
         <div style="padding-bottom:0;">
-    <img src="assets/img/cast.png" style="transform:matrix(1.2, 0, 0, 1.2, 0, -16);" id="px-cast">
+    <img src="assets/img/cast.png" id="px-cast">
 </div>
 
     </div>
 </div>
 <link rel="stylesheet" href="assets/css/flickity.css">
+<link rel="stylesheet" href="assets/css/extras.css">
 <div class="ms-strip grid-half" style="z-index:2;position:relative;">
     <div class="pa-1">
         <p>Take on your developer dream in Catalina City in <i>Unscripted</i>! Follow the journey of a software developer aspiring to publish their video game into the PackStore's prestigious arcade while starting a new life in Catalina City, the city for software developers. Reconnect and meet close friends like Zen'no, new peers like Katorin, the Kotlin-loving developer and Meredith, a freelance typeface designer. Play through, debug, and exploit your game as you continue your daily routines. Encounter potential enemies like Christina, Catalina City's enigmatic Python developer.</p>
     </div>
     <div class="main-carousel pa-1">
         <div class="carousel-cell">
-            <img class="ms-shadowed strong" src="assets/img/preview1.png">
+            <img class="ms-shadowed" src="assets/img/preview1.png">
 </div>
         <div class="carousel-cell">
-            <img class="ms-shadowed strong" src="assets/img/preview2.png">
+            <img class="ms-shadowed" src="assets/img/preview2.png">
 </div>
         <div class="carousel-cell">
-            <img class="ms-shadowed strong" src="assets/img/preview3.png">
+            <img class="ms-shadowed" src="assets/img/preview3.png">
 </div>
         <div class="carousel-cell">
-            <img class="ms-shadowed strong" src="assets/img/preview4.png">
+            <img class="ms-shadowed" src="assets/img/preview4.png">
 </div>
         <div class="carousel-cell">
-            <img class="ms-shadowed strong" src="assets/img/preview5.png">
+            <img class="ms-shadowed" src="assets/img/preview5.png">
 </div>
     </div>
 </div>
@@ -105,7 +108,7 @@
         <img src="assets/img/imessage.png" style="width:50%;">
 </div>
 </div>
-<script type="text/javascript" src="https://static.itch.io/api.js"></script><script type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script><script type="text/javascript" src="assets/js/simpleParallax.min.js"></script><script type="text/javascript" src="assets/js/itchy.js"></script><script type="text/javascript" src="assets/js/utils.js"></script><script type="text/javascript">
+<script type="text/javascript" src="https://static.itch.io/api.js"></script><script type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script><script type="text/javascript" src="assets/js/simpleParallax.min.js"></script><script type="text/javascript" src="assets/js/itchy.js"></script><script type="text/javascript" src="assets/js/equineattrs.js"></script><script type="text/javascript" src="assets/js/utils.js"></script><script type="text/javascript">
 window.onload = () => {
     // linkGameButton();
     var elem = document.querySelector('.main-carousel');
@@ -118,97 +121,7 @@ window.onload = () => {
     var castImage = document.getElementById("px-cast");
     new simpleParallax(castImage);
 };
-</script><style>
-.ms-navbar-container.transparent {
-    background: rgba(0.0, 0.0, 0.0, 0.1);
-}
-
-.ms-front-container {
-    background: linear-gradient(to bottom right, #E04698, #AE56A9, #6D6DB5, #388BD5);
-    box-shadow: inset var(--shadow-standard);
-}
-
-.ms-fp-alt_link {
-    color: var(--color-link);
-}
-
-.ms-fp-alt_link:hover {
-    color: #E6B673;
-}
-
-.simpleParallax {
-    overflow: initial !important;
-}
-
-div#stickers {
-    color: var(--color-special-text);
-    background: linear-gradient(to bottom right, #E04698, #AE56A9, #6D6DB5, #388BD5);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.sticker-buttons {
-    display:flex;
-    height:46px;
-    justify-content: center;
-    justify-items: center;
-}
-
-.sticker-buttons .telegram {
-    background-color: #0088cc;
-    color: white;
-}
-
-.sticker-buttons .telegram:hover {
-    background-color: #5cb8ff;
-}
-
-.sticker-buttons a.disabled {
-    opacity: 0.5;
-    pointer-events: none;
-    cursor: not-allowed;
-}
-
-.sticker-buttons .apple {
-    padding-right: 12px;
-    height: 100%;
-}
-
-.sticker-buttons .apple img {
-    height: 100%;
-}
-
-.carousel-cell {
-    width: 100%;
-}
-
-.carousel-cell img {
-    width: 100%;
-}
-
-@media(max-width:768px) {
-    .sticker-buttons {
-        display:flex;
-        height:100%;
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .sticker-buttons a {
-        padding: 10px;
-    }
-
-    .sticker-buttons .apple {
-        padding-left: inherit;
-    }
-
-    .sticker-buttons .apple img {
-        height: 48px;
-    }
-}
-</style>
-<div class="ms-strip thicker grid-thirds">
+</script><div class="ms-strip thicker grid-thirds">
         <div class="pa-1 ms-posts" style="display:flex; flex-direction:column;">
             <a href="posts/2020/06/15/captains-devlog-may-june-2020/"><h4 class="ms-strip-margins">Captain's Devlog: May-June 2020</h4></a>
             <small class="ms-header-text ms-strip-margins">Written on June 15, 2020</small>
@@ -240,7 +153,6 @@ div#stickers {
     <div>
         <ul class="ms-footer-links">
 <li><a href="https://twitter.com/UnscriptedVN">@UnscriptedVN</a></li>
-                <li><a href="https://github.com/UnscriptedVN">GitHub</a></li>
                 <li><a href="pages/privacy_policy/">Privacy Policy</a></li>
                 <li><a href="https://github.com/UnscriptedVN/issues/issues/">Issues</a></li>
                 <li><a href="pages/playtests/">Playtesting Program</a></li>
