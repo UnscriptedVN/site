@@ -8,8 +8,10 @@ Unscripted is a game about software development created by [Marquis Kurt](https:
 
 Primary contributors are considered members of the Unscripted team and have direct contributions to the project.
 
-- Raseruuu (@Raseruuu), for sprite artwork
-- Stray Objects, for background music
+- **Raseruuu (@Raseruuu)**, for sprite artwork
+- **Stray Objects**, for background music
+- **Marek Domagala**, for the main menu music
+- **Anjali Kunapaneni**, for voice acting Fira Sans
 
 ## Testing Contributors
 
