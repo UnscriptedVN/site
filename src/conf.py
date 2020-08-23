@@ -156,7 +156,7 @@ NAVIGATION_LINKS = {
 NAVIGATION_ALT_LINKS = {
     DEFAULT_LANG: (
         ("https://twitter.com/UnscriptedVN", "@UnscriptedVN"),
-        # ("https://github.com/UnscriptedVN", "GitHub"),
+        ("https://reddit.com/r/UnscriptedVN", "r/UnscriptedVN"),
         ("/pages/privacy_policy/", "Privacy Policy"),
         ("https://github.com/UnscriptedVN/issues/issues/", "Issues"),
         ("/pages/playtests/", "Playtesting Program"),
