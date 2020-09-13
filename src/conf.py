@@ -159,7 +159,7 @@ NAVIGATION_ALT_LINKS = {
         ("https://reddit.com/r/UnscriptedVN", "r/UnscriptedVN"),
         ("/pages/privacy_policy/", "Privacy Policy"),
         ("https://github.com/UnscriptedVN/issues/issues/", "Issues"),
-        ("/pages/playtests/", "Playtesting Program"),
+        ("https://beta.unscriptedvn.dev", "Playtesting Program"),
         ("/pages/contributions/", "Contributions"),
         ("/archive.html", "Devlog Archive"),
         ("/rss.xml", "RSS"),

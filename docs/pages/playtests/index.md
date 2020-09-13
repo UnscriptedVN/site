@@ -2,6 +2,8 @@
 
 # Unscripted Playtesting Program
 
+<meta http-equiv="Refresh" content="0; url='https://beta.unscriptedvn.dev'" />
+
 <div style="text-align:center;">
     <img src="/assets/img/playtest.png" class="beta-img" />
 </div>
