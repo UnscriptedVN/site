@@ -27,6 +27,7 @@
 
 img#px-cast {
   transform: matrix(1.2, 0, 0, 1.2, 0, -16);
+  z-index: -1;
 }
 
 div#stickers {
@@ -61,12 +62,15 @@ div#stickers {
 
 .cta-buttons-container {
   display: flex;
-  height: 48px;
+  flex-wrap: wrap;
   z-index: 50;
+  margin-bottom: 10%;
+  max-width: 100%;
 }
 
-.cta-buttons-container a:not(:last-child) {
-  margin-right: 8px;
+.cta-buttons-container > a {
+    margin: 8px;
+    height: 28px;
 }
 
 .cta-buttons-container .steam {
@@ -81,6 +85,15 @@ div#stickers {
 .cta-buttons-container .itch {
   background-color: #fa5c5c;
   color: white;
+}
+
+.cta-buttons-container .gjolt {
+    background-color: #ccff00;
+    color: black;
+}
+
+.cta-buttons-container .gjolt img {
+    height: 24px;
 }
 
 .cta-buttons-container .itch img {
@@ -146,11 +159,14 @@ div#stickers {
 
   .cta-buttons-container {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
+    margin-bottom: 50%;
   }
 
-  .cta-buttons-container a {
-    height: 48px;
+  .cta-buttons-container > a {
+    height: 32px;
+    margin: 8px;
   }
 
   .cta-buttons-container a:not(:last-child) {

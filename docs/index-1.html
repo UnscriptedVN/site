@@ -59,6 +59,8 @@
         <img src="assets/img/steam.svg" alt="STEAM"></a>
     <a title="Get on Itch.io" id="equine-loader" href="https://marquiskurt.itch.io/unscripted" class="ms-button itch">
         <img src="assets/img/itchio-logo-white.svg" alt="Itch.io"></a>
+    <a title="Get on GameJolt" id="equine-loader-2" href="https://gamejolt.com/games/unscriptedvn/550162" class="ms-button gjolt">
+        <img src="assets/img/gjolt.png" alt="GameJolt"></a>
 </div>
 </div>
         </div>
@@ -111,6 +113,7 @@
 <script type="text/javascript" src="https://static.itch.io/api.js"></script><script type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script><script type="text/javascript" src="assets/js/simpleParallax.min.js"></script><script type="text/javascript" src="assets/js/itchy.js"></script><script type="text/javascript" src="assets/js/equineattrs.js"></script><script type="text/javascript" src="assets/js/utils.js"></script><script type="text/javascript">
 window.onload = () => {
     // linkGameButton();
+    resolveEquineAttrs();
     var elem = document.querySelector('.main-carousel');
     var flkty = new Flickity(elem, {
         freeScroll: true,
