@@ -63,13 +63,14 @@ div#stickers {
 .cta-buttons-container {
   display: flex;
   flex-wrap: wrap;
-  height: 48px;
   z-index: 50;
   margin-bottom: 10%;
+  max-width: 100%;
 }
 
-.cta-buttons-container a:not(:last-child) {
-  margin-right: 8px;
+.cta-buttons-container > a {
+    margin: 8px;
+    height: 28px;
 }
 
 .cta-buttons-container .steam {
@@ -163,8 +164,8 @@ div#stickers {
     margin-bottom: 50%;
   }
 
-  .cta-buttons-container a {
-    height: 48px;
+  .cta-buttons-container > a {
+    height: 32px;
     margin: 8px;
   }
 

@@ -42,6 +42,7 @@ div#stickers {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100%;
 }
 
 .equine-loaded {
@@ -50,9 +51,13 @@ div#stickers {
 
 .sticker-buttons {
   display: flex;
-  height: 46px;
+  flex-wrap: wrap;
   justify-content: center;
   justify-items: center;
+}
+
+.sticker-buttons > a {
+  max-height: 46px;
 }
 
 .sticker-buttons .telegram {
@@ -139,18 +144,22 @@ div#stickers {
 
 @media (max-width: 768px) {
   .sticker-buttons {
+    margin-top: 25%;
+    margin-bottom: 25%;
     display: flex;
-    height: 100%;
     flex-direction: column;
+    flex-wrap: inherit;
     text-align: center;
+    z-index: 50;
   }
 
   .sticker-buttons a {
-    padding: 10px;
+    padding: 8px;
   }
 
   .sticker-buttons .apple {
     padding-left: inherit;
+    height: auto;
   }
 
   .sticker-buttons .apple img {
