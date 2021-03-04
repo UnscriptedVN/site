@@ -28,7 +28,7 @@ SITE_URL = "https://unscriptedvn.dev/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://unscripted.marquiskurt.net/"
-BLOG_EMAIL = "unscriptedvn@marquiskurt.net"
+BLOG_EMAIL = "software@marquiskurt.net"
 BLOG_DESCRIPTION = "A visual novel about software development"  # (translatable)
 
 # Nikola is multilingual!
@@ -146,6 +146,7 @@ NAVIGATION_LINKS = {
         ("/index.html#stickers", "Stickers"),
         ("https://discord.gg/CXxnVhX", "Discord"),
         ("https://docs.unscriptedvn.dev", "Docs"),
+        ("https://candella.unscriptedvn.dev", "Candella"),
         ("https://github.com/UnscriptedVN", "GitHub"),
     ),
 }
