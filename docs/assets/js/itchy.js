@@ -6,17 +6,19 @@ function linkGameButton() {
 }
 
 const _setupItch = () => {
-    let parser = new RSSParser();
+    let parser = new RSSParser({
+        headers: {'X-Requested-With': 'XMLHttpRequest'}
+    });
 
     return {
         feed: [],
         sources: [
-            "https://cors-anywhere.herokuapp.com/https://marquiskurt.itch.io/unscripted/devlog.rss"
+            "https://roxanne.unscriptedvn.dev/https://marquiskurt.itch.io/unscripted/devlog.rss"
         ],
 
         get (source) {
             parser.parseURL(source, (err, feed) => {
-                if (err) console.error(err);
+                if (err) { console.error(err); return; } 
                 feed.items.forEach(entry => this.addToFeed(entry));
             });
         },
