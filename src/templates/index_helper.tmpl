@@ -71,7 +71,24 @@ Choose your route. Take on your developer dream in Catalina City. Make new frien
         <img src="/assets/img/xcstickers.png"/>
     </div>
 </div>
+
+{# Post feed from itch.io #}
+<div x-data="_setupItch()" x-init="init" class="ms-strip thicker grid-thirds">
+    <template x-for="entry in feed">
+        <div class="pa-1 ms-posts" style="display:flex; flex-direction:column;">
+            <a x-bind:href="entry.link"><h4 class="ms-strip-margins"><span x-text="entry.title"></span></h4></a>
+            <small class="ms-header-text ms-strip-margins">Written on <span x-text="entry.date.toDateString()"></span></small>
+            <p style="flex-grow: 1;"><span x-text="entry.excerpt"></span></p>
+            <p style="text-align: center;">
+                <a class="ms-button" x-bind:href="entry.link"><i data-feather="book"></i>Read more</a>
+            </p>
+        </div>
+    </template>
+</div>
+
 <script type="text/javascript" src="https://static.itch.io/api.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/rss-parser@3.7.6/dist/rss-parser.min.js"></script>
 <script type="text/javascript" src="/assets/js/flickity.pkgd.min.js"></script>
 <script type="text/javascript" src="/assets/js/simpleParallax.min.js"></script>
 <script type="text/javascript" src="/assets/js/itchy.js"></script>
