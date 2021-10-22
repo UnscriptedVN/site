@@ -11,7 +11,7 @@ const _setupItch = () => {
     return {
         feed: [],
         sources: [
-            "https://marquiskurt.itch.io/unscripted/devlog.rss"
+            "https://cors-anywhere.herokuapp.com/https://marquiskurt.itch.io/unscripted/devlog.rss"
         ],
 
         get (source) {
