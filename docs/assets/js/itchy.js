@@ -7,7 +7,7 @@ function linkGameButton() {
 
 const _setupItch = () => {
     let parser = new RSSParser({
-        headers: {'X-Requested-With': 'XMLHttpRequest'}
+        headers: { 'X-Requested-With': 'XMLHttpRequest '}
     });
 
     return {
